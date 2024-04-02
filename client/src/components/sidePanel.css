@@ -1,0 +1,63 @@
+  .side-bar {
+    display: flex;
+  }
+  .history{
+    /* margin-left: 2vh; */
+    text-align: center;
+    width: 20vh;
+    height: 93vh;
+    background-color: white;
+    color: #333;
+    transition: width 0.3s ease;
+    padding: 20px;
+    /* border: 0.5px solid #ccc; */
+    border-color: #333;
+  }
+  .sidebar {
+    width: 20vh;
+    height: 93vh;
+    background-color: white;
+    color: #333;
+    transition: width 0.3s ease;
+    padding: 20px;
+    /* border-color: black; */
+    border: 0.5px solid #ccc;
+    border-color: #333;
+  }
+  
+  .sidebar.collapsed {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .main-content {
+    text-align: center;
+    flex-grow: 1;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+  }
+  
+  .toggle-button {
+    position: absolute;
+    top: 20px;
+    left: 20vh;
+    z-index: 10;
+  }
+  
+  /* Adjust the left position of the button when the sidebar is collapsed */
+  .main-content .toggle-button {
+    transition: left 0.3s ease;
+  }
+  
+  /* When the sidebar is collapsed, move the button to the leftmost side */
+  .sidebar.collapsed ~ .main-content .toggle-button {
+    left: 20px;
+  }
+  .div-btn{
+    margin-top: 2vh;
+    height: 4vh;
+  }
+  .div-btn:hover{
+    color:cornflowerblue;
+  }
